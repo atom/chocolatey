@@ -1,0 +1,81 @@
+#OS junk files
+[Tt]humbs.db
+*.DS_Store
+
+#Visual Studio files
+*.[Oo]bj
+*.user
+*.aps
+*.pch
+*.vspscc
+*.vssscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.[Cc]ache
+*.ilk
+*.log
+*.lib
+*.sbr
+*.sdf
+*.opensdf
+*.unsuccessfulbuild
+ipch/
+obj/
+[Bb]in
+[Dd]ebug*/
+[Rr]elease*/
+Ankh.NoLoad
+App_Data*/
+*.psess
+UpgradeLog.XML
+
+#MonoDevelop
+*.pidb
+*.userprefs
+
+#Tooling
+_ReSharper*/
+*.resharper
+[Tt]est[Rr]esult*
+*.sass-cache
+
+#Project files
+[Bb]uild/
+
+#Subversion files
+.svn
+
+# Office Temp Files
+~$*
+
+#ncrunch
+*ncrunch*
+*crunch*.local.xml
+
+# visual studio database projects
+*.dbmdl
+
+#Test files
+*.testsettings
+
+#Resharper
+*.DotSettings
+
+#VIM
+*.swp
+
+/web/output.txt
+/common/Edia.Domain.Schema/Edia.Domain.Schema/App.config
+/common/Edia.Domain.Schema/Edia.Domain.Schema/Database1.cs
+/common/Edia.Domain.Schema/Edia.Domain.Schema/Database1.tt
+/common/Edia.Domain.Schema/Edia.Domain.Schema/EF.Reverse.POCO.Core.ttinclude
+/common/Edia.Domain.Schema/Edia.Domain.Schema/EF.Reverse.POCO.ttinclude
+/common/Edia.Domain.Schema/Edia.Domain.Schema/Edia.Domain.Schema.csproj
+/common/Edia.Domain.Schema/Edia.Domain.Schema/Properties/AssemblyInfo.cs
+/common/Edia.Domain.Schema/Edia.Domain.Schema/packages.config
+/web/Configuration/ConnectionStrings.config
