@@ -64,7 +64,7 @@
 }
 
 $packageName = 'Atom' # arbitrary name for the package, used in messages
-$url = 'https://github.com/bradgearon/atom/releases/download/v0.96.0/Atom.zip' # download url
+$url = 'https://github.com/bradgearon/atom/releases/download/v0.96.1/Atom.zip' # download url
 $url64 = $url # 64bit URL here or just use the same as $url
 $dest = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
 $desktop = $([System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::DesktopDirectory))
