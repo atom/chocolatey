@@ -13,6 +13,8 @@
   },
   "homepage": "https://github.com/atom/chocolatey",
   "dependencies": {
-    "cheerio": "^0.16.0"
+    "cheerio": "^0.16.0",
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13"
   }
 }
