@@ -1,0 +1,18 @@
+{
+  "name": "chocolatey",
+  "version": "0.0.0",
+  "description": "chocolatey installer for Atom",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atom/chocolatey"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/atom/chocolatey/issues"
+  },
+  "homepage": "https://github.com/atom/chocolatey",
+  "dependencies": {
+    "cheerio": "^0.16.0"
+  }
+}
