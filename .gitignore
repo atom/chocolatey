@@ -79,3 +79,6 @@ _ReSharper*/
 /common/Edia.Domain.Schema/Edia.Domain.Schema/Properties/AssemblyInfo.cs
 /common/Edia.Domain.Schema/Edia.Domain.Schema/packages.config
 /web/Configuration/ConnectionStrings.config
+
+#node.js
+node_modules/
