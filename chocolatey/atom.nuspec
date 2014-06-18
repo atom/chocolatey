@@ -13,7 +13,7 @@
     <projectUrl>http://atom.io</projectUrl>
     <tags>atom notepad text github</tags>
     <copyright/>
-    <licenseUrl>https://github.com/atom/LICENSE.md</licenseUrl>
+    <licenseUrl>https://github.com/atom/atom/LICENSE.md</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://raw.githubusercontent.com/atom/atom/master/resources/win/atom.ico</iconUrl>
     <releaseNotes>https://atom.io/releases</releaseNotes>
