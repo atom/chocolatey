@@ -82,3 +82,6 @@ _ReSharper*/
 
 #node.js
 node_modules/
+
+#binaries
+*.nupkg
