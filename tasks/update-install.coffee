@@ -4,9 +4,9 @@ cheerio = require 'cheerio'
 
 module.exports = (grunt) ->
   grunt.registerTask 'updateInstall', 'Updates the nuspec for chocolatey', ->
-    pkg = grunt.config 'pkg'
+    release = grunt.config 'release'
     installScriptPath = 'chocolatey/tools/chocolateyInstall.ps1'
-    versionExp = /(download\/v)[.0-9]*\//i
+    versionExp = /(download\/)v[.0-9]*\//i
     installScript = grunt.file.read installScriptPath
-    installScript = installScript.replace versionExp, '$1' + pkg.version + '/'
+    installScript = installScript.replace versionExp, '$1' + release.tag_name + '/'
     grunt.file.write installScriptPath, installScript

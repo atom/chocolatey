@@ -4,10 +4,10 @@ cheerio = require 'cheerio'
 
 module.exports = (grunt) ->
   grunt.registerTask 'updateNuspec', 'Updates the nuspec for chocolatey', ->
-    pkg = grunt.config 'pkg'
+    release = grunt.config 'release'
     nuspecPath = 'chocolatey/atom.nuspec'
     nuspec = grunt.file.read nuspecPath
     $ = cheerio.load nuspec,
       xmlMode: true
-    $('version').text pkg.version
+    $('version').text release.tag_name
     grunt.file.write nuspecPath, $.xml()
