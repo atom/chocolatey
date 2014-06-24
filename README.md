@@ -18,3 +18,8 @@ You will also need output from a Windows build of [Atom](http://github.com/atom/
     npm install
     grunt
     ````
+1. (optional) Publish the package:
+
+    ````base
+    chocolatey push [output.nupkg] -ApiKey [apikey]
+    ````
