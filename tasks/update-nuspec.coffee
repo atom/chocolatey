@@ -1,5 +1,3 @@
-fs = require 'fs'
-path = require 'path'
 cheerio = require 'cheerio'
 
 module.exports = (grunt) ->
@@ -9,5 +7,5 @@ module.exports = (grunt) ->
     nuspec = grunt.file.read nuspecPath
     $ = cheerio.load nuspec,
       xmlMode: true
-    $('version').text release.tag_name
+    $('version').text release.tag_name.replace 'v', ''
     grunt.file.write nuspecPath, $.xml()

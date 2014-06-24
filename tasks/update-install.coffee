@@ -1,7 +1,3 @@
-fs = require 'fs'
-path = require 'path'
-cheerio = require 'cheerio'
-
 module.exports = (grunt) ->
   grunt.registerTask 'updateInstall', 'Updates the nuspec for chocolatey', ->
     release = grunt.config 'release'
