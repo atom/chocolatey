@@ -13,9 +13,12 @@ module.exports = (grunt) ->
       cmd: 'cpack.bat'
       args: ['chocolatey/atom.nuspec']
     cinst:
-      cmd: 'cinst.bat',
+      cmd: 'cinst.bat'
       opts:
         cwd: path.resolve('directory')
+    cuninst:
+      cmd: 'cuninst.bat'
+      args: ['Atom']
 
   grunt.registerTask 'update', ['getRelease', 'updateNuspec', 'updateInstall']
   grunt.registerTask('default', ['update', 'pack'])
