@@ -11,7 +11,7 @@ $desktop = $([System.Environment]::GetFolderPath([System.Environment+SpecialFold
 $desktopLink = Join-Path $desktop "$packageName.lnk"
 Install-ChocolateyShortcut -shortcutFilePath $desktopLink -targetPath "$dest\Atom.exe"
 
-$startMenu = $([System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::StartMenu))
+$startMenu = $([System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::Programs))
 $githubStartMenuGroup = Join-Path $desktop "GitHub, Inc"
 $startMenuLink = Join-Path $githubStartMenuGroup "$packageName.lnk"
 Install-ChocolateyShortcut -shortcutFilePath $startMenuLink -targetPath "$dest\Atom.exe"
