@@ -16,12 +16,12 @@ You will also need output from a Windows build of [Atom](http://github.com/atom/
 1. Publish an Atom release including binary output for Windows
 1. Execute grunt update and pack tasks (default)
 
-    ````bash
+    ```bash
     npm install
     grunt
-    ````
+    ```
 1. (optional) Publish the package:
 
-    ````base
+    ```bash
     chocolatey push [output.nupkg] -ApiKey [apikey]
-    ````
+    ```
