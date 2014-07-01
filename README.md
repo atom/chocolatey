@@ -6,6 +6,8 @@ To build an Atom chocolatey package, you'll need access to a Windows machine wit
 + [Chocolatey](http://chocolatey.org/)
 + [node.js 0.10.x](http://nodejs.org/)
 + [Grunt](http://gruntjs.com/)
++ (optional) Run `apm install language-powershell` to add PowerShell syntax
+  highlighting.
 
 You will also need output from a Windows build of [Atom](http://github.com/atom/atom) published as a release or otherwise hosted in zip archive.
 
