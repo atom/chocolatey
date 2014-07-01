@@ -1,7 +1,7 @@
 path = require 'path'
 
 module.exports = (grunt) ->
-  grunt.registerTask 'inst', ->
+  grunt.registerTask 'install', ->
     cinst = grunt.config 'cinst'
     done = @async()
     grunt.util.spawn cinst, (err, output, code) ->

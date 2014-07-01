@@ -1,5 +1,5 @@
 module.exports = (grunt) ->
-  grunt.registerTask 'pack', ->
+  grunt.registerTask 'uninstall', ->
     cuinst = grunt.config 'cuninst'
     done = @async()
     grunt.util.spawn cuninst, (err, output, code) ->
