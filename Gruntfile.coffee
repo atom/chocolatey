@@ -10,8 +10,12 @@ module.exports = (grunt) ->
       headers:
         'User-Agent': 'node.js/' + process.version
     cpack:
-      cmd: 'cpack.bat',
+      cmd: 'cpack.bat'
       args: ['chocolatey/atom.nuspec']
-  
+    cinst:
+      cmd: 'cinst.bat',
+      opts:
+        cwd: path.resolve('directory')
+
   grunt.registerTask 'update', ['getRelease', 'updateNuspec', 'updateInstall']
   grunt.registerTask('default', ['update', 'pack'])
