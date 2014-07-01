@@ -22,4 +22,5 @@ module.exports = (grunt) ->
       args: ['Atom']
 
   grunt.registerTask 'update', ['getRelease', 'updateNuspec', 'updateInstall']
+  grunt.registerTask 'reinstall', ['cpack', 'uninstall', 'install']
   grunt.registerTask('default', ['update', 'pack'])
