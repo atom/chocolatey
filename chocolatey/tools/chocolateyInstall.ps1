@@ -8,7 +8,12 @@ $url64 = $url # 64bit URL here or just use the same as $url
 Install-ChocolateyZipPackage "$packageName" "$url" "$dest" "$url64"
 
 $desktop = $([System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::DesktopDirectory))
-$link = Join-Path $desktop "$packageName.lnk"
-Install-ChocolateyShortcut -shortcutFilePath $link -targetPath "$dest\Atom.exe"
+$desktopLink = Join-Path $desktop "$packageName.lnk"
+Install-ChocolateyShortcut -shortcutFilePath $desktopLink -targetPath "$dest\Atom.exe"
+
+$startMenu = $([System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::StartMenu))
+$githubStartMenuGroup = Join-Path $desktop "GitHub, Inc"
+$startMenuLink = Join-Path $githubStartMenuGroup "$packageName.lnk"
+Install-ChocolateyShortcut -shortcutFilePath $startMenuLink -targetPath "$dest\Atom.exe"
 
 Install-BinFile "apm" "$dest\resources\app\apm\node_modules\atom-package-manager\bin\apm.cmd"
