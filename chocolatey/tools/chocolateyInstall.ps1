@@ -13,6 +13,7 @@ Install-ChocolateyShortcut -shortcutFilePath $desktopLink -targetPath "$dest\Ato
 
 $startMenu = $([System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::Programs))
 $githubStartMenuGroup = Join-Path $desktop "GitHub, Inc"
+New-Item $githubStartMenuGroup -type directory -force
 $startMenuLink = Join-Path $githubStartMenuGroup "$packageName.lnk"
 Install-ChocolateyShortcut -shortcutFilePath $startMenuLink -targetPath "$dest\Atom.exe"
 
