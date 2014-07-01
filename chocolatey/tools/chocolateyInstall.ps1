@@ -10,3 +10,5 @@ Install-ChocolateyZipPackage "$packageName" "$url" "$dest" "$url64"
 $desktop = $([System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::DesktopDirectory))
 $link = Join-Path $desktop "$packageName.lnk"
 Install-ChocolateyShortcut -shortcutFilePath $link -targetPath "$dest\Atom.exe"
+
+Install-BinFile "apm" "$dest\resources\app\apm\node_modules\atom-package-manager\bin\apm.cmd"
