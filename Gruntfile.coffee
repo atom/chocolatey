@@ -14,6 +14,7 @@ module.exports = (grunt) ->
       args: ['chocolatey/atom.nuspec']
     cinst:
       cmd: 'cinst.bat'
+      args: ['Atom', '-source', '%cd%']
       opts:
         cwd: path.resolve('directory')
     cuninst:
