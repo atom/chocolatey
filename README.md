@@ -8,22 +8,29 @@ with the following tools:
 + [Chocolatey](http://chocolatey.org/)
 + [node.js 0.10.x](http://nodejs.org/)
 + [Grunt](http://gruntjs.com/)
-+ (optional) Run `apm install language-powershell` to add PowerShell syntax
-  highlighting.
++ Run `apm install language-powershell` to add PowerShell syntax
+  highlighting to Atom (optional).
 
 You will also need output from a Windows build of [Atom](http://github.com/atom/atom)
 published as a release or otherwise hosted in a zip archive.
 
 ### Instructions
 1. Clone this repository (as a sibling to your Atom working copy)
-1. Publish an Atom release including binary output for Windows
-1. Execute grunt update and pack tasks (default)
+2. Publish an Atom release including binary output for Windows
+4. Execute grunt update and pack tasks (default)
 
     ```bash
     npm install
     grunt
     ```
-1. (optional) Publish the package:
+
+5. Install the package locally (optional):
+
+    ```bash
+    grunt reinstall
+    ```
+
+6. Publish the package (optional):
 
     ```bash
     chocolatey push [output.nupkg] -ApiKey [apikey]
