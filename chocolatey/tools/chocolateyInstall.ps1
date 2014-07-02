@@ -20,5 +20,8 @@ New-Item $githubStartMenuGroup -type directory -force
 $startMenuLink = Join-Path $githubStartMenuGroup "$packageName.lnk"
 Install-ChocolateyShortcut -shortcutFilePath $startMenuLink -targetPath "$dest\Atom.exe"
 
+# Install explorer menu shortcut
+Install-ChocolateyExplorerMenuItem "Atom" "Open with Atom" "$dest\Atom.exe" "file"
+
 # Install apm shortcut
 Install-BinFile "apm" "$dest\resources\app\apm\node_modules\atom-package-manager\bin\apm.cmd"
