@@ -20,4 +20,4 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'update', ['getRelease', 'updateNuspec', 'updateInstall']
   grunt.registerTask 'reinstall', ['pack', 'uninstall', 'install']
-  grunt.registerTask('default', ['update', 'pack'])
+  grunt.registerTask 'default', ['update', 'pack']
