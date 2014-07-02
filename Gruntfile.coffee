@@ -1,5 +1,4 @@
 path = require 'path'
-https = require 'https'
 
 module.exports = (grunt) ->
   grunt.loadTasks('tasks')

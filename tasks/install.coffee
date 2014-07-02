@@ -1,5 +1,3 @@
-path = require 'path'
-
 module.exports = (grunt) ->
   grunt.registerTask 'install', ->
     cinst = grunt.config 'cinst'

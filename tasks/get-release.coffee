@@ -1,4 +1,5 @@
 https = require 'https'
+
 module.exports = (grunt) ->
   grunt.registerTask 'getRelease', ->
     releaseUrl = grunt.config 'releaseUrl'
