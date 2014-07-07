@@ -18,6 +18,6 @@ module.exports = (grunt) ->
       cmd: 'cuninst.bat'
       args: ['Atom']
 
-  grunt.registerTask 'update', ['getRelease', 'updateNuspec', 'updateInstall']
+  grunt.registerTask 'update', ['get-release', 'update-nuspec', 'update-install']
   grunt.registerTask 'reinstall', ['pack', 'uninstall', 'install']
   grunt.registerTask 'default', ['update', 'pack']

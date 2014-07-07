@@ -1,7 +1,7 @@
 cheerio = require 'cheerio'
 
 module.exports = (grunt) ->
-  grunt.registerTask 'updateNuspec', 'Updates the nuspec for chocolatey', ->
+  grunt.registerTask 'update-nuspec', 'Updates the nuspec for chocolatey', ->
     release = grunt.config 'release'
     nuspecPath = 'chocolatey/atom.nuspec'
     nuspec = grunt.file.read nuspecPath

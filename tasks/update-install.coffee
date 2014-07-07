@@ -1,5 +1,5 @@
 module.exports = (grunt) ->
-  grunt.registerTask 'updateInstall', 'Updates the nuspec for chocolatey', ->
+  grunt.registerTask 'update-install', 'Updates the nuspec for chocolatey', ->
     release = grunt.config 'release'
     installScriptPath = 'chocolatey/tools/chocolateyInstall.ps1'
     versionExp = /(download\/)v[.0-9]*\//i

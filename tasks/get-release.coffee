@@ -1,7 +1,7 @@
 https = require 'https'
 
 module.exports = (grunt) ->
-  grunt.registerTask 'getRelease', ->
+  grunt.registerTask 'get-release', ->
     releaseUrl = grunt.config 'releaseUrl'
     done = @async()
     json = ''
@@ -14,4 +14,4 @@ module.exports = (grunt) ->
             grunt.config 'release', release
             done()
             return
-        done(new Error("No release found with an atom-windows.zip asset"))
+        done(new Error('No release found with an atom-windows.zip asset'))
