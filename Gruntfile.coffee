@@ -5,7 +5,7 @@ module.exports = (grunt) ->
   grunt.initConfig
     releaseUrl:
       hostname: 'api.github.com'
-      path: '/repos/atom/atom/releases?per_page=1'
+      path: '/repos/atom/atom/releases?per_page=25'
       headers:
         'User-Agent': 'node.js/' + process.version
     cpack:

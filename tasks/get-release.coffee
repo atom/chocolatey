@@ -9,6 +9,9 @@ module.exports = (grunt) ->
       response.on 'data', (chunk) ->
         json += chunk
       response.on 'end', ->
-        [releaseJson] = JSON.parse json
-        grunt.config 'release', releaseJson
-        done()
+        for release in JSON.parse(json) ? []
+          for asset in release.assets ? [] when asset.name is 'atom-windows.zip'
+            grunt.config 'release', release
+            done()
+            return
+        done(new Error("No release found with an atom-windows.zip asset"))
