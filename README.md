@@ -27,7 +27,7 @@ You will also need output from a Windows build of
 otherwise hosted in a zip archive.
 
 ### Instructions
-1. Clone this repository (as a sibling to your Atom working copy)
+1. Clone this repository
 2. Publish an Atom release including binary output for Windows
 3. Execute grunt update and pack tasks (default)
 
