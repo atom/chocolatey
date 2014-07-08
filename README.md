@@ -22,8 +22,9 @@ with the following tools:
 + Run `apm install language-powershell` to add PowerShell syntax
   highlighting to Atom (optional).
 
-You will also need output from a Windows build of [Atom](http://github.com/atom/atom)
-published as a release or otherwise hosted in a zip archive.
+You will also need output from a Windows build of
+[Atom](http://github.com/atom/atom/releases) published as a release or
+otherwise hosted in a zip archive.
 
 ### Instructions
 1. Clone this repository (as a sibling to your Atom working copy)
