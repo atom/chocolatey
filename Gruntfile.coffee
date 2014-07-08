@@ -1,5 +1,3 @@
-path = require 'path'
-
 module.exports = (grunt) ->
   grunt.loadTasks('tasks')
   grunt.initConfig
