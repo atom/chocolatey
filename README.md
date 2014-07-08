@@ -1,6 +1,15 @@
 This repository contains source code and templates for building a [Chocolatey](http://chocolatey.org)
 package for [Atom](http://atom.io).
 
+The install script does the following:
+
+  * Installs [apm](https://github.com/atom/apm) to the `Chocolatey\bin` folder
+  * Adds an Atom desktop shortcut
+  * Adds an Atom start menu shortcut inside the *GitHub Inc.* folder
+  * Adds an *Open with Atom* context menu in the Explorer
+
+## Building
+
 To build an Atom chocolatey package, you'll need access to a Windows machine
 with the following tools:
 
