@@ -16,6 +16,7 @@ To build an Atom chocolatey package, you'll need access to a Windows machine
 with the following tools:
 
 ### Requirements
+
 + [Chocolatey](http://chocolatey.org/)
 + [node.js 0.10.x](http://nodejs.org/)
 + [Grunt](http://gruntjs.com/)
@@ -27,9 +28,10 @@ You will also need output from a Windows build of
 otherwise hosted in a zip archive.
 
 ### Instructions
+
 1. Clone this repository
-2. Publish an Atom release including binary output for Windows
-3. Execute grunt update and pack tasks (default)
+2. Publish an Atom release that includes an `atom-windows.zip` file
+3. Build the Atom `.nupkg` file
 
     ```bash
     npm install
@@ -42,8 +44,15 @@ otherwise hosted in a zip archive.
     grunt reinstall
     ```
 
-5. Publish the package (optional):
+### Publishing
 
-    ```bash
-    chocolatey push [output.nupkg] -ApiKey [apikey]
-    ```
+Follow [these](https://github.com/chocolatey/chocolatey/wiki/CommandsPush)
+instructions to setup your API key so you can publish. You can find
+your API key in your chocolatey [account page](https://chocolatey.org/account).
+
+Once you've built the `.nupkg` file you can push it up the chocolatey by
+running:
+
+```
+cpush .\Atom.0.XXX.0.nupkg
+```
