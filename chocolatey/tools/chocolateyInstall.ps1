@@ -11,17 +11,17 @@ Install-ChocolateyZipPackage "$packageName" "$url" "$dest" "$url64"
 # Install desktop shortcut
 $desktop = $([System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::DesktopDirectory))
 $desktopLink = Join-Path $desktop "$packageName.lnk"
-Install-ChocolateyShortcut -shortcutFilePath $desktopLink -targetPath "$dest\Atom.exe"
+Install-ChocolateyShortcut -shortcutFilePath $desktopLink -targetPath "$dest\Atom\Atom.exe"
 
 # Install start menu shortcut
 $startMenu = $([System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::Programs))
 $githubStartMenuGroup = Join-Path $startMenu "GitHub, Inc"
 New-Item $githubStartMenuGroup -type directory -force
 $startMenuLink = Join-Path $githubStartMenuGroup "$packageName.lnk"
-Install-ChocolateyShortcut -shortcutFilePath $startMenuLink -targetPath "$dest\Atom.exe"
+Install-ChocolateyShortcut -shortcutFilePath $startMenuLink -targetPath "$dest\Atom\Atom.exe"
 
 # Install explorer menu shortcut
-Install-ChocolateyExplorerMenuItem "Atom" "Open with Atom" "$dest\Atom.exe" "file"
+Install-ChocolateyExplorerMenuItem "Atom" "Open with Atom" "$dest\Atom\Atom.exe" "file"
 
 # Install apm shortcut
-Install-BinFile "apm" "$dest\resources\app\apm\node_modules\atom-package-manager\bin\apm.cmd"
+Install-BinFile "apm" "$dest\Atom\resources\app\apm\node_modules\atom-package-manager\bin\apm.cmd"
