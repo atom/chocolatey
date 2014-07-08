@@ -1,5 +1,7 @@
-This repository contains source code and templates for building a [Chocolatey](http://chocolatey.org)
-package for [Atom](http://atom.io).
+This repository contains source code and templates for building a
+[Chocolatey](http://chocolatey.org) package for [Atom](http://atom.io).
+The package can be downloaded from the
+[Atom package page](https://chocolatey.org/packages/Atom).
 
 The install script does the following:
 
