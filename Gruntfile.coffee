@@ -7,13 +7,13 @@ module.exports = (grunt) ->
       headers:
         'User-Agent': 'node.js/' + process.version
     cpack:
-      cmd: 'cpack.bat'
+      cmd: 'cpack'
       args: ['chocolatey/atom.nuspec']
     cinst:
-      cmd: 'cinst.bat'
+      cmd: 'cinst'
       args: ['Atom', '-source', __dirname]
     cuninst:
-      cmd: 'cuninst.bat'
+      cmd: 'cuninst'
       args: ['Atom']
 
   grunt.registerTask 'update', ['get-release', 'update-nuspec', 'update-install']
