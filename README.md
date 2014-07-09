@@ -18,6 +18,8 @@ with the following tools:
 ### Requirements
 
 + [Chocolatey](http://chocolatey.org/)
+  + You will need to close and reopen your command prompt or PowerShell window
+    after installing.
 + [node.js 0.10.x](http://nodejs.org/)
 + [Grunt](http://gruntjs.com/)
 + Run `apm install language-powershell` to add PowerShell syntax
