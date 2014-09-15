@@ -83,3 +83,51 @@ SET DIR=%~dp0%
 cmd /c ""$path %*""
 exit /b %ERRORLEVEL%" | Out-File $packageBatchFileName -encoding ASCII
 }
+
+function Install-ChocolateyExplorerMenuItemEx {
+param(
+  [string]$menuKey,
+  [string]$menuLabel,
+  [string]$command,
+  [string]$iconLocation,
+  [ValidateSet('file','directory','background')]
+  [string]$type = "file"
+)
+try {
+  Write-Debug "Running 'Install-ChocolateyExplorerMenuItem' with menuKey:'$menuKey', menuLabel:'$menuLabel', command:'$command', type '$type', iconLocation:'$iconLocation'"
+  $argName = "%1"
+  if($type -eq "file") {
+    $key = "*"
+  } 
+  elseif($type -eq "directory") {
+    $key="directory"
+  } 
+  elseif($type -eq "background") {
+    $key="directory\background"
+    $argName="%V"
+  } else{ 
+    return 1
+  }
+  
+  $iconCmd =""
+  if($iconLocation) {
+    $iconCmd="Set-ItemProperty -LiteralPath 'HKCR:\$key\shell\$menuKey' -Name 'Icon'  -Value '$iconLocation'"
+  }
+  $elevated = "`
+    if( -not (Test-Path -path HKCR:) ) {New-PSDrive -Name HKCR -PSProvider registry -Root Hkey_Classes_Root};`
+    if(!(test-path -LiteralPath 'HKCR:\$key\shell\$menuKey')) { new-item -Path 'HKCR:\$key\shell\$menuKey' };`
+    Set-ItemProperty -LiteralPath 'HKCR:\$key\shell\$menuKey' -Name '(Default)'  -Value '$menuLabel';`
+    if(!(test-path -LiteralPath 'HKCR:\$key\shell\$menuKey\command')) { new-item -Path 'HKCR:\$key\shell\$menuKey\command' };`
+    Set-ItemProperty -LiteralPath 'HKCR:\$key\shell\$menuKey\command' -Name '(Default)' -Value '$command \`"$argName\`"';`
+	$iconCmd; return 0;"
+
+  Start-ChocolateyProcessAsAdmin $elevated
+  Write-Host "'$menuKey' explorer menu item has been created"
+}
+catch {
+    $errorMessage = "'$menuKey' explorer menu item was not created $($_.Exception.Message)"
+    Write-Error $errorMessage
+    throw $errorMessage
+  }
+}
+
