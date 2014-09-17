@@ -28,7 +28,6 @@ $elevated = @()
   $elevated += $(Install-ChocolateyExplorerMenuItemEx "Atom" "Open Folder with Atom" "$dest\Atom\atom.exe" -iconLocation $iconPath -type "directory")
   $elevated += $(Install-ChocolateyExplorerMenuItemEx "Atom" "Open Folder with Atom" "$dest\Atom\atom.exe" -iconLocation $iconPath -type "background")
 $cmd = $($elevated -join ';')
-Write-Host $cmd
 Start-ChocolateyProcessAsAdmin $cmd
 
 # Install apm shortcut
