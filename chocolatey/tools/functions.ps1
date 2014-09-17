@@ -98,17 +98,17 @@ try {
   $argName = "%1"
   if($type -eq "file") {
     $key = "*"
-  } 
+  }
   elseif($type -eq "directory") {
     $key="directory"
-  } 
+  }
   elseif($type -eq "background") {
     $key="directory\background"
     $argName="%V"
-  } else{ 
+  } else{
     return 1
   }
-  
+
   $iconCmd =""
   if($iconLocation) {
     $iconCmd="Set-ItemProperty -LiteralPath 'HKCR:\$key\shell\$menuKey' -Name 'Icon'  -Value '$iconLocation'"
@@ -121,8 +121,7 @@ try {
     Set-ItemProperty -LiteralPath 'HKCR:\$key\shell\$menuKey\command' -Name '(Default)' -Value '$command \`"$argName\`"';`
 	$iconCmd; return 0;"
 
-  Start-ChocolateyProcessAsAdmin $elevated
-  Write-Host "'$menuKey' explorer menu item has been created"
+  return $elevated
 }
 catch {
     $errorMessage = "'$menuKey' explorer menu item was not created $($_.Exception.Message)"
@@ -130,4 +129,3 @@ catch {
     throw $errorMessage
   }
 }
-

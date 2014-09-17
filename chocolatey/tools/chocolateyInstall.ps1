@@ -4,7 +4,7 @@ $dest = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
 
 # Install zip
 $packageName = 'Atom' # arbitrary name for the package, used in messages
-$url = 'https://github.com/atom/atom/releases/download/v0.127.0/atom-windows.zip' # download url
+$url = 'https://github.com/atom/atom/releases/download/v0.129.0/atom-windows.zip' # download url
 $url64 = $url # 64bit URL here or just use the same as $url
 Install-ChocolateyZipPackage "$packageName" "$url" "$dest" "$url64"
 $exePath = $dest + '\Atom\atom.exe'
@@ -23,9 +23,15 @@ Install-ChocolateyShortcut -shortcutFilePath $startMenuLink -targetPath $exePath
 
 $iconPath = '"' + $exePath + '"'
 # Install explorer menu file, directory, and background shortcuts
-Install-ChocolateyExplorerMenuItemEx "Atom" "Open with Atom" "$dest\Atom\atom.exe" -iconLocation $iconPath -type "file" 
-Install-ChocolateyExplorerMenuItemEx "Atom" "Open Folder with Atom" "$dest\Atom\atom.exe" -iconLocation $iconPath -type "directory" 
-Install-ChocolateyExplorerMenuItemEx "Atom" "Open Folder with Atom" "$dest\Atom\atom.exe" -iconLocation $iconPath -type "background"
+$elevated = @()
+  $elevated += $(Install-ChocolateyExplorerMenuItemEx "Atom" "Open with Atom" "$dest\Atom\atom.exe" -iconLocation $iconPath -type "file")
+  $elevated += $(Install-ChocolateyExplorerMenuItemEx "Atom" "Open Folder with Atom" "$dest\Atom\atom.exe" -iconLocation $iconPath -type "directory")
+  $elevated += $(Install-ChocolateyExplorerMenuItemEx "Atom" "Open Folder with Atom" "$dest\Atom\atom.exe" -iconLocation $iconPath -type "background")
+$cmd = $($elevated -join ';')
+Write-Host $cmd
+Start-ChocolateyProcessAsAdmin $cmd
 
 # Install apm shortcut
 Install-BinFile "apm" "$dest\Atom\resources\app\apm\node_modules\atom-package-manager\bin\apm.cmd"
+
+Write-Host "explorer menu items created"
