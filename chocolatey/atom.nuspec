@@ -15,7 +15,7 @@
     <copyright/>
     <licenseUrl>https://github.com/atom/atom/LICENSE.md</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://raw.githubusercontent.com/atom/atom/master/resources/win/atom.ico</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/atom/atom/master/resources/atom.png</iconUrl>
     <releaseNotes>https://atom.io/releases</releaseNotes>
   </metadata>
   <files>
