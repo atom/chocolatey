@@ -4,7 +4,7 @@ $dest = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
 
 # Install zip
 $packageName = 'Atom' # arbitrary name for the package, used in messages
-$url = 'https://github.com/atom/atom/releases/download/v0.149.0/atom-windows.zip' # download url
+$url = 'https://github.com/atom/atom/releases/download/v0.150.0/atom-windows.zip' # download url
 $url64 = $url # 64bit URL here or just use the same as $url
 Install-ChocolateyZipPackage "$packageName" "$url" "$dest" "$url64"
 $exePath = $dest + '\Atom\atom.exe'
