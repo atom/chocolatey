@@ -1,3 +1,13 @@
+:newspaper::rotating_light::newspaper::rotating_light::newspaper:
+
+Atom now has an installer and auto updater which should be used instead
+of the Chocolatey package.
+
+See http://blog.atom.io/2014/12/10/a-windows-installer-and-updater.html for
+more details.
+
+:newspaper::rotating_light::newspaper::rotating_light::newspaper:
+
 This repository contains source code and templates for building a
 [Chocolatey](http://chocolatey.org) package for [Atom](http://atom.io).
 The package can be downloaded from the
