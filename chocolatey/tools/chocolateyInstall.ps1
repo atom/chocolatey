@@ -1,6 +1,6 @@
 $packageName = 'Atom'
 $url = 'https://atom.io/download/windows'
 $installerType = 'exe'
-$silentArgs = ''
+$silentArgs = '--quiet'
 
 Install-ChocolateyPackage $packageName $installerType $silentArgs $url
