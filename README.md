@@ -28,7 +28,7 @@ otherwise hosted in a zip archive.
 ### Instructions
 
 1. Clone this repository
-2. Publish an Atom release that includes an `atom-windows.zip` file
+2. Publish an Atom release that includes an `AtomSetup.exe` file
 3. Build the Atom `.nupkg` file
 
     ```bash
