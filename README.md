@@ -1,7 +1,8 @@
 This repository contains source code and templates for building a
 [Chocolatey](http://chocolatey.org) package for [Atom](http://atom.io).
 The package can be downloaded from the
-[Atom package page](https://chocolatey.org/packages/Atom).
+[Atom package page](https://chocolatey.org/packages/Atom) or by running
+`cinst Atom`.
 
 The Atom Chocolatey package simply kicks off the `AtomSetup.exe` installer.
 
