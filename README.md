@@ -3,7 +3,7 @@ This repository contains source code and templates for building a
 The package can be downloaded from the
 [Atom package page](https://chocolatey.org/packages/Atom).
 
-The Atom Chocolatey package simply kicks of the `AtomSetup.exe` installer.
+The Atom Chocolatey package simply kicks off the `AtomSetup.exe` installer.
 
 ## Building
 
