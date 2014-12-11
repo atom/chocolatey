@@ -24,8 +24,7 @@ with the following tools:
   highlighting to Atom (optional).
 
 You will also need output from a Windows build of
-[Atom](http://github.com/atom/atom/releases) published as a release or
-otherwise hosted in a zip archive.
+[Atom](http://github.com/atom/atom/releases) published as a release.
 
 ### Instructions
 
