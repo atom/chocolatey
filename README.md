@@ -6,7 +6,7 @@ The package can be downloaded from the
 
 The Atom Chocolatey package simply kicks off the `AtomSetup.exe` installer.
 Atom will automatically update once installed so you don't need to run
-`cup Atom`.
+`cup Atom` to upgrade.
 
 ## Building
 
