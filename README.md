@@ -5,6 +5,8 @@ The package can be downloaded from the
 `cinst Atom`.
 
 The Atom Chocolatey package simply kicks off the `AtomSetup.exe` installer.
+Atom will automatically update once installed so you don't need to run
+`cup Atom`.
 
 ## Building
 
