@@ -10,6 +10,6 @@ if (Test-Path ($atomPath)) {Remove-Item $atomPath -force}
 $packageName = 'Atom'
 $url = 'https://atom.io/download/windows'
 $installerType = 'exe'
-$silentArgs = ''
+$silentArgs = '--silent'
 
 Install-ChocolateyPackage $packageName $installerType $silentArgs $url
