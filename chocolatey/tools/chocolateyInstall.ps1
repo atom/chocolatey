@@ -2,6 +2,9 @@
 $apmPath = Join-Path $nugetExePath "apm.bat"
 if (Test-Path ($apmPath)) {Remove-Item $apmPath -force}
 
+$atomPath = Join-Path $nugetExePath "atom.exe"
+if (Test-Path ($atomPath)) {Remove-Item $atomPath -force}
+
 # Run installer
 $packageName = 'Atom'
 $url = 'https://atom.io/download/windows'
