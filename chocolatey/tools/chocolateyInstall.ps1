@@ -2,6 +2,7 @@
 $apmPath = Join-Path $nugetExePath "apm.bat"
 if (Test-Path ($apmPath)) {Remove-Item $apmPath -force}
 
+# Remove old atom.exe shim
 $atomPath = Join-Path $nugetExePath "atom.exe"
 if (Test-Path ($atomPath)) {Remove-Item $atomPath -force}
 
