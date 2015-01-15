@@ -14,8 +14,8 @@
       So the version of Atom installed may be later than the version listed
       as the chocolatey package version.
 
-      The version of Atom installed will also automatically update so you won't
-      need to upgrade it manually via chocolatey.
+      The version of Atom installed will also automatically update so you will
+      not need to upgrade it manually via chocolatey.
     </description>
     <projectUrl>http://atom.io</projectUrl>
     <tags>atom notepad text github</tags>
