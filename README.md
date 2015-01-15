@@ -1,24 +1,12 @@
-:newspaper::rotating_light::newspaper::rotating_light::newspaper:
-
-Atom now has an installer and auto updater which should be used instead
-of the Chocolatey package.
-
-See http://blog.atom.io/2014/12/10/a-windows-installer-and-updater.html for
-more details.
-
-:newspaper::rotating_light::newspaper::rotating_light::newspaper:
-
 This repository contains source code and templates for building a
 [Chocolatey](http://chocolatey.org) package for [Atom](http://atom.io).
 The package can be downloaded from the
-[Atom package page](https://chocolatey.org/packages/Atom).
+[Atom package page](https://chocolatey.org/packages/Atom) or by running
+`cinst Atom`.
 
-The install script does the following:
-
-  * Installs [apm](https://github.com/atom/apm) to the `Chocolatey\bin` folder
-  * Adds an Atom desktop shortcut
-  * Adds an Atom start menu shortcut inside the *GitHub Inc.* folder
-  * Adds an *Open with Atom* context menu in the Explorer
+The Atom Chocolatey package simply kicks off the `AtomSetup.exe` installer.
+Atom will automatically update once installed so you don't need to run
+`cup Atom` to upgrade.
 
 ## Building
 
@@ -36,13 +24,12 @@ with the following tools:
   highlighting to Atom (optional).
 
 You will also need output from a Windows build of
-[Atom](http://github.com/atom/atom/releases) published as a release or
-otherwise hosted in a zip archive.
+[Atom](http://github.com/atom/atom/releases) published as a release.
 
 ### Instructions
 
 1. Clone this repository
-2. Publish an Atom release that includes an `atom-windows.zip` file
+2. Publish an Atom release that includes an `AtomSetup.exe` file
 3. Build the Atom `.nupkg` file
 
     ```bash
