@@ -4,6 +4,14 @@ The package can be downloaded from the
 [Atom package page](https://chocolatey.org/packages/Atom) or by running
 `cinst Atom`.
 
+## 🚨 Unmaintained 🚨
+
+This repository is no longer maintained. The chocolatey Atom package is not
+maintained by the Atom team. To obtain official Atom releases, go to
+https://atom.io.
+
+## How it works
+
 The Atom Chocolatey package simply kicks off the `AtomSetup.exe` installer.
 Atom will automatically update once installed so you don't need to run
 `cup Atom` to upgrade.
